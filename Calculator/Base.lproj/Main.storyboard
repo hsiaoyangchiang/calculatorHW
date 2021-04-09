@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oxanium-VariableFont_wght.ttf">
+            <string>OxaniumRoman-Medium</string>
+            <string>OxaniumRoman-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-qv-Eh8">
+                                <rect key="frame" x="20" y="312" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-I7-IFS">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-h8-Kek">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="86"/>
+                                                <color key="backgroundColor" red="0.98039215686274506" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-Medium" family="Oxanium" pointSize="36"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VL0-an-ibg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdE-QN-NMf">
+                                                <rect key="frame" x="195" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.36470588235294116" green="0.55686274509803924" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-Medium" family="Oxanium" pointSize="22"/>
+                                                <state key="normal" title="MOD">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="mod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RuN-6S-yVM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geq-3s-Dpl">
+                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.40784313725490196" green="0.83137254901960778" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pg7-lc-DIN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="NNs-ZS-ACE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="geq-3s-Dpl" firstAttribute="width" secondItem="nw4-qv-Eh8" secondAttribute="width" multiplier="0.217914" id="3wN-nY-xuG"/>
+                                    <constraint firstItem="GuG-h8-Kek" firstAttribute="width" secondItem="nw4-qv-Eh8" secondAttribute="width" multiplier="0.47861" id="ba6-TN-3Q0"/>
+                                    <constraint firstItem="fQx-I7-IFS" firstAttribute="centerX" secondItem="nw4-qv-Eh8" secondAttribute="centerX" id="cl2-vp-HDl"/>
+                                    <constraint firstItem="fQx-I7-IFS" firstAttribute="height" secondItem="nw4-qv-Eh8" secondAttribute="height" id="e2b-tr-4RZ"/>
+                                    <constraint firstItem="PdE-QN-NMf" firstAttribute="width" secondItem="nw4-qv-Eh8" secondAttribute="width" multiplier="0.217914" id="erT-8Q-jTw"/>
+                                    <constraint firstItem="fQx-I7-IFS" firstAttribute="centerY" secondItem="nw4-qv-Eh8" secondAttribute="centerY" id="rIk-vd-7dd"/>
+                                    <constraint firstItem="fQx-I7-IFS" firstAttribute="width" secondItem="nw4-qv-Eh8" secondAttribute="width" id="x3Y-BO-2FL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjv-Eo-ffA">
+                                <rect key="frame" x="20" y="418" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-sf-M9G">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2t-kx-FW5">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tyh-Ub-h5G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLQ-7V-iM5">
+                                                <rect key="frame" x="97.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SdP-Dj-wKL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV4-sE-ALX">
+                                                <rect key="frame" x="195" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOM-pq-OMe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n93-pe-cqj">
+                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.40784313725490196" green="0.83137254901960778" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxA-uH-6Hj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="n93-pe-cqj" secondAttribute="trailing" id="y8I-t6-89Z"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cLQ-7V-iM5" firstAttribute="height" secondItem="mjv-Eo-ffA" secondAttribute="height" id="Fbb-5L-rXN"/>
+                                    <constraint firstItem="yoQ-sf-M9G" firstAttribute="centerY" secondItem="mjv-Eo-ffA" secondAttribute="centerY" id="IXK-DP-Tq9"/>
+                                    <constraint firstItem="yoQ-sf-M9G" firstAttribute="centerX" secondItem="mjv-Eo-ffA" secondAttribute="centerX" id="Jet-6a-hBI"/>
+                                    <constraint firstItem="n93-pe-cqj" firstAttribute="height" secondItem="mjv-Eo-ffA" secondAttribute="height" id="P8h-zK-40x"/>
+                                    <constraint firstItem="yoQ-sf-M9G" firstAttribute="leading" secondItem="mjv-Eo-ffA" secondAttribute="leading" id="PKH-sI-Uvj"/>
+                                    <constraint firstItem="CV4-sE-ALX" firstAttribute="height" secondItem="mjv-Eo-ffA" secondAttribute="height" id="Tfh-Gv-b4A"/>
+                                    <constraint firstItem="yoQ-sf-M9G" firstAttribute="width" secondItem="mjv-Eo-ffA" secondAttribute="width" id="kmY-cS-ZAP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x1-lT-QSW">
+                                <rect key="frame" x="20" y="524" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="guw-4e-DKZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chH-f7-hIm">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WCi-Gw-J08"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48F-nH-1jU">
+                                                <rect key="frame" x="97.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KN1-Hw-q8k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-jz-fHF">
+                                                <rect key="frame" x="195" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wl9-Xi-rOx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-yC-UgN">
+                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.40784313725490196" green="0.83137254901960778" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4WY-kq-d2r"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="5an-Qw-LNK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="guw-4e-DKZ" firstAttribute="height" secondItem="2x1-lT-QSW" secondAttribute="height" id="HUP-AN-L3S"/>
+                                    <constraint firstItem="guw-4e-DKZ" firstAttribute="width" secondItem="2x1-lT-QSW" secondAttribute="width" id="Yr7-dV-poT"/>
+                                    <constraint firstItem="guw-4e-DKZ" firstAttribute="centerY" secondItem="2x1-lT-QSW" secondAttribute="centerY" id="d2P-3z-tOe"/>
+                                    <constraint firstItem="guw-4e-DKZ" firstAttribute="centerX" secondItem="2x1-lT-QSW" secondAttribute="centerX" id="mAK-Qb-bhI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E93-Js-s52">
+                                <rect key="frame" x="20" y="630" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-nn-lfB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srE-Pb-ftG">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnw-dc-4Q0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9J-k3-QUi">
+                                                <rect key="frame" x="97.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V53-tT-sab"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9T-jJ-zS5">
+                                                <rect key="frame" x="195" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PuP-9U-3tW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="239-CV-8Vp">
+                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.40784313725490196" green="0.83137254901960778" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEU-Fa-xMz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="bhB-15-7dC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Poj-nn-lfB" firstAttribute="width" secondItem="E93-Js-s52" secondAttribute="width" id="Cfq-Eh-z9u"/>
+                                    <constraint firstItem="Poj-nn-lfB" firstAttribute="height" secondItem="E93-Js-s52" secondAttribute="height" id="It3-hL-KiY"/>
+                                    <constraint firstItem="Poj-nn-lfB" firstAttribute="centerY" secondItem="E93-Js-s52" secondAttribute="centerY" id="c8I-iI-DIv"/>
+                                    <constraint firstItem="Poj-nn-lfB" firstAttribute="centerX" secondItem="E93-Js-s52" secondAttribute="centerX" id="yqN-Yg-dI1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADd-dh-6AG">
+                                <rect key="frame" x="20" y="736" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k18-lf-TKe">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI2-td-mdu">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fO-H7-8iw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-hD-rv3">
+                                                <rect key="frame" x="195" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="0.9137254901960784" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.35686274509803922" green="0.42352941176470588" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="690-mw-Die"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-gc-wQ3">
+                                                <rect key="frame" x="292.5" y="0.0" width="81.5" height="86"/>
+                                                <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="40"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="0.23529411764705882" green="0.30196078431372547" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="result:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjG-AL-IUD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="86" id="r12-j2-iA3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="k18-lf-TKe" firstAttribute="width" secondItem="ADd-dh-6AG" secondAttribute="width" id="2Vp-GR-z2g"/>
+                                    <constraint firstItem="8uS-hD-rv3" firstAttribute="width" secondItem="ADd-dh-6AG" secondAttribute="width" multiplier="0.217914" id="65v-aq-FSr"/>
+                                    <constraint firstItem="k18-lf-TKe" firstAttribute="centerX" secondItem="ADd-dh-6AG" secondAttribute="centerX" id="Szw-Ca-bcn"/>
+                                    <constraint firstItem="k18-lf-TKe" firstAttribute="height" secondItem="ADd-dh-6AG" secondAttribute="height" id="adm-2Y-Oiq"/>
+                                    <constraint firstItem="RmO-gc-wQ3" firstAttribute="width" secondItem="ADd-dh-6AG" secondAttribute="width" multiplier="0.217914" id="fyA-tZ-0lP"/>
+                                    <constraint firstItem="k18-lf-TKe" firstAttribute="centerY" secondItem="ADd-dh-6AG" secondAttribute="centerY" id="g1v-pL-wP2"/>
+                                    <constraint firstItem="qI2-td-mdu" firstAttribute="width" secondItem="ADd-dh-6AG" secondAttribute="width" multiplier="0.47861" id="xdx-fB-Osp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIW-jW-sUb">
+                                <rect key="frame" x="20" y="144" width="374" height="89.5"/>
+                                <fontDescription key="fontDescription" name="OxaniumRoman-SemiBold" family="Oxanium" pointSize="72"/>
+                                <color key="textColor" red="0.23529411764705882" green="0.30196078431372547" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UIW-jW-sUb" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="2qt-JE-jVl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ADd-dh-6AG" secondAttribute="bottom" constant="40" id="39s-EK-Gpj"/>
+                            <constraint firstItem="mjv-Eo-ffA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="4Np-Pd-0qD"/>
+                            <constraint firstItem="E93-Js-s52" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8XN-et-Wzr"/>
+                            <constraint firstItem="ADd-dh-6AG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="8du-jo-j6g"/>
+                            <constraint firstItem="nw4-qv-Eh8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="AhY-6E-Kk1"/>
+                            <constraint firstItem="UIW-jW-sUb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ce7-H7-Uxy"/>
+                            <constraint firstItem="2x1-lT-QSW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FVb-ND-xzp"/>
+                            <constraint firstItem="nw4-qv-Eh8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G6V-tw-puc"/>
+                            <constraint firstItem="2x1-lT-QSW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="Im0-m3-QIP"/>
+                            <constraint firstItem="ADd-dh-6AG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JX2-QR-9iA"/>
+                            <constraint firstItem="UIW-jW-sUb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="JqL-26-o6h"/>
+                            <constraint firstItem="2x1-lT-QSW" firstAttribute="top" secondItem="mjv-Eo-ffA" secondAttribute="bottom" constant="20" id="O50-GH-wZ2"/>
+                            <constraint firstItem="UIW-jW-sUb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="aZH-4a-NHW"/>
+                            <constraint firstItem="2x1-lT-QSW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="biy-D0-6LP"/>
+                            <constraint firstItem="ADd-dh-6AG" firstAttribute="top" secondItem="E93-Js-s52" secondAttribute="bottom" constant="20" id="dkM-w6-bCn"/>
+                            <constraint firstItem="mjv-Eo-ffA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eQd-3p-sTh"/>
+                            <constraint firstItem="nw4-qv-Eh8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="ey6-4o-9mM"/>
+                            <constraint firstItem="nw4-qv-Eh8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UIW-jW-sUb" secondAttribute="bottom" constant="30" id="hxY-BU-sLH"/>
+                            <constraint firstItem="E93-Js-s52" firstAttribute="top" secondItem="2x1-lT-QSW" secondAttribute="bottom" constant="20" id="pHD-1N-vzP"/>
+                            <constraint firstItem="mjv-Eo-ffA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="pe4-Eq-eAB"/>
+                            <constraint firstItem="mjv-Eo-ffA" firstAttribute="top" secondItem="nw4-qv-Eh8" secondAttribute="bottom" constant="20" id="pxb-tX-a9b"/>
+                            <constraint firstItem="ADd-dh-6AG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="rPq-w4-eHO"/>
+                            <constraint firstItem="E93-Js-s52" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="sro-ex-h1K"/>
+                            <constraint firstItem="E93-Js-s52" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0959821" id="v6E-JO-Rsc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="add" destination="239-CV-8Vp" id="mRr-Bp-e4S"/>
+                        <outlet property="divide" destination="geq-3s-Dpl" id="v8V-ms-GSF"/>
+                        <outlet property="label" destination="UIW-jW-sUb" id="E8H-h3-oFD"/>
+                        <outlet property="mod" destination="PdE-QN-NMf" id="ojB-p8-cct"/>
+                        <outlet property="multiply" destination="n93-pe-cqj" id="Aaq-6T-dSA"/>
+                        <outlet property="subtract" destination="Si6-yC-UgN" id="13b-oG-3FK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
